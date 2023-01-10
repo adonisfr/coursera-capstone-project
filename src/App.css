@@ -70,6 +70,244 @@ header p {
   cursor: pointer;
 }
 
+/* Specials Sections */
+.specials-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+div .special-card {
+  display: flex;
+  flex-direction: column;
+  height: 439px;
+  max-width: 265px;
+  background-color: #edefee;
+  border-radius: 16px 16px 0px 0px;
+  padding-bottom: 20px;
+}
+
+div .special-card .special-card-image {
+  position: relative;
+  height: 180px;
+  border: 1px solid #000000;
+  border-radius: 16px 16px 0px 0px;
+}
+
+div .special-card .special-card-image img {
+  border-radius: 16px 16px 0px 0px;
+}
+
+div .special-card .special-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 12px;
+  height: 100%;
+  padding: 10px;
+}
+
+div .special-card-content .special-card-name-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+div .special-card-name-price .special-card-name {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 90%;
+}
+
+div .special-card-name-price .special-card-price {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ee9972;
+}
+
+div .special-card-content .special-card-description p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #495e57;
+}
+
+div .special-card-content .special-card-link a {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  text-decoration: none;
+}
+
+/* Testimonials Section */
+
+div .testimonial-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 590px;
+  background-color: #d9d9d9;
+  padding: 122px 0px;
+}
+
+div .testimonial-section .testimonials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+div .testimonial-section .testimonial-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 66px;
+}
+
+div .testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  height: 175px;
+  width: 200px;
+  background-color: white;
+  padding: 29px 24px;
+}
+
+div .testimonial-card .testimonial-card-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+div .testimonial-card .testimonial-card-riview {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+div .testimonial-card .testimonial-card-info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+div .testimonial-card-info .testimonial-image img {
+  height: 46px;
+  width: 47px;
+}
+
+/* Little Lemon Section */
+
+.little-lemon-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 550px;
+  padding: 10px 20px;
+}
+
+div .little-lemon-content-title h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 77px;
+  margin-bottom: 0px;
+}
+
+div .little-lemon-content-title h2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #333333;
+  margin-top: 0px;
+}
+
+div .little-lemon-content {
+  height: 468px;
+}
+
+div .little-lemon-content p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: justify;
+  color: #000000;
+  max-width: 373px;
+}
+
+div .little-lemon-content-images {
+  position: relative;
+  height: 450px;
+  width: 450px;
+}
+
+div .little-lemon-content-images img {
+  height: 270px;
+  width: 220px;
+}
+
+div .little-lemon-content-images .little-lemon-content-image1 {
+  position: absolute;
+  bottom: 30px;
+  left: 10%;
+}
+
+div .little-lemon-content-images .little-lemon-content-image2 {
+  position: absolute;
+  top: 50px;
+  right: 8%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+  background: #ccd7d3;
+  height: 417px;
+}
+
+footer .footer-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .footer-menu h5 {
+  margin-bottom: 0px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  color: #495e57;
+}
+
+footer .footer-menu ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+footer .footer-menu ul li .custom-ul-li-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+  color: #333333;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
   header {
     flex-direction: row;
@@ -80,6 +318,30 @@ header p {
   .header-image {
     height: 300px;
     width: 250px;
+  }
+
+  /* Specials Sections */
+  .specials-section {
+    flex-direction: row;
+  }
+
+  /* Testimonials Sections */
+  div .testimonial-section .testimonials-list {
+    flex-direction: row;
+  }
+
+  /* Little Lemon Section */
+  .little-lemon-section {
+    flex-direction: row;
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: row;
+  }
+
+  footer .footer-menu {
+    height: 210px;
   }
 }
 
