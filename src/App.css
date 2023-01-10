@@ -46,7 +46,8 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #495e57;
-  gap: 100px;
+  gap: 60px;
+  padding-bottom: 25px;
 }
 
 header p {
@@ -54,8 +55,8 @@ header p {
 }
 
 .header-image {
-  height: 300px;
-  width: 250px;
+  height: 350px;
+  width: 90%;
 }
 
 .custom-button {
@@ -74,6 +75,11 @@ header p {
     flex-direction: row;
     justify-content: center;
     height: 406px;
+  }
+
+  .header-image {
+    height: 300px;
+    width: 250px;
   }
 }
 

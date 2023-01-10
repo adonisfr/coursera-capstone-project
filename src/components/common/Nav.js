@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import Menu from "./Menu";
 
 const Nav = () => {
-  const [openMenu, setOpenMenu] = useState(true);
+  const [openMenu, setOpenMenu] = useState(false);
   return (
     <nav>
       <Logo />
