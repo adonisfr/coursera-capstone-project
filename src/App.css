@@ -362,6 +362,38 @@ footer .footer-menu ul li .custom-ul-li-link {
   border-radius: 5px;
 }
 
+/* booking comfirmation */
+.booking-comfirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 400px;
+}
+
+.booking-comfirmation div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.booking-comfirmation div h1 {
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 0px;
+  color: #03291c;
+}
+
+.booking-comfirmation div h4 {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 0px;
+  color: #495e57;
+}
+
 /*Responsive*/
 @media screen and (min-width: 768px) {
   header {

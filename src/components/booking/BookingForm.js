@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../common/Button";
 
-const BookingForm = ({ availableTimes, updateTimes }) => {
+const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
   const [values, setValues] = useState({
     date: "",
     time: "",
@@ -11,7 +11,7 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
 
   const hendleOnChange = (e) => {
     if (e.target.id === "date") {
-      updateTimes();
+      updateTimes(e.target.value);
     }
     setValues((prev) => {
       return { ...prev, [e.target.id]: e.target.value };
@@ -20,7 +20,7 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("hendle submit", values);
+    submitForm(values);
   };
 
   return (
