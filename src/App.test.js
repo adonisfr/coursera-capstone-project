@@ -1,14 +1,8 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import App from "./App";
-import {
-  BrowserRouter as Router,
-  Routes,
-  MemoryRouter,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Booking from "./components/booking/Booking";
 import BookingForm from "./components/booking/BookingForm";
-import ConfirmedBooking from "./components/booking/ConfirmedBooking";
 
 test("renders Reserve a Table text", () => {
   render(<App />, { wrapper: Router });
@@ -65,4 +59,118 @@ test("Validate submitForm function", async () => {
   const btnSubmit = screen.getByRole("button");
   fireEvent.click(btnSubmit);
   await waitFor(() => expect(submitForm).toHaveBeenCalled());
+});
+
+test("Validate that the forms date field has a required field message", async () => {
+  const availableTimes = ["17:00"];
+  const updateTimes = jest.fn();
+  const submitForm = jest.fn();
+  render(
+    <BookingForm
+      availableTimes={availableTimes}
+      updateTimes={updateTimes}
+      submitForm={submitForm}
+    />
+  );
+
+  const getDateField = screen.getByLabelText(/Choose date/);
+  fireEvent.change(getDateField, { target: { value: "" } });
+  await expect(
+    screen.findByText("This field is required")
+  ).resolves.toBeInTheDocument();
+});
+
+test("validate that the date field of the form is filled", async () => {
+  const availableTimes = ["17:00"];
+  const updateTimes = jest.fn();
+  const submitForm = jest.fn();
+  render(
+    <BookingForm
+      availableTimes={availableTimes}
+      updateTimes={updateTimes}
+      submitForm={submitForm}
+    />
+  );
+
+  const getDateField = screen.getByLabelText(/Choose date/);
+  fireEvent.change(getDateField, { target: { value: "2023-01-17" } });
+  await expect(
+    screen.queryByText("This field is required")
+  ).not.toBeInTheDocument();
+});
+
+test("Validate that the forms time field has a required field message", async () => {
+  const availableTimes = ["17:00"];
+  const updateTimes = jest.fn();
+  const submitForm = jest.fn();
+  render(
+    <BookingForm
+      availableTimes={availableTimes}
+      updateTimes={updateTimes}
+      submitForm={submitForm}
+    />
+  );
+
+  const getDateField = screen.getByLabelText(/Choose time/);
+  fireEvent.change(getDateField, { target: { value: "" } });
+  await expect(
+    screen.findByText("This field is required")
+  ).resolves.toBeInTheDocument();
+});
+
+test("validate that the time field of the form is filled", async () => {
+  const availableTimes = ["17:00"];
+  const updateTimes = jest.fn();
+  const submitForm = jest.fn();
+  render(
+    <BookingForm
+      availableTimes={availableTimes}
+      updateTimes={updateTimes}
+      submitForm={submitForm}
+    />
+  );
+
+  const getDateField = screen.getByLabelText(/Choose date/);
+  fireEvent.change(getDateField, { target: { value: "17:00" } });
+  await expect(
+    screen.queryByText("This field is required")
+  ).not.toBeInTheDocument();
+});
+
+test("Validate that the forms guests field has a required field message", async () => {
+  const availableTimes = ["17:00"];
+  const updateTimes = jest.fn();
+  const submitForm = jest.fn();
+  render(
+    <BookingForm
+      availableTimes={availableTimes}
+      updateTimes={updateTimes}
+      submitForm={submitForm}
+    />
+  );
+
+  const getDateField = screen.getByLabelText(/Number of guests/);
+  fireEvent.change(getDateField, { target: { value: null } });
+  await expect(
+    screen.findByText("This field is required")
+  ).resolves.toBeInTheDocument();
+});
+
+test("validate that the time guests of the form is filled", async () => {
+  const availableTimes = ["17:00"];
+  const updateTimes = jest.fn();
+  const submitForm = jest.fn();
+  render(
+    <BookingForm
+      availableTimes={availableTimes}
+      updateTimes={updateTimes}
+      submitForm={submitForm}
+    />
+  );
+
+  const getDateField = screen.getByLabelText(/Number of guests/);
+  fireEvent.change(getDateField, { target: { value: 2 } });
+  await expect(
+    screen.queryByText("This field is required")
+  ).not.toBeInTheDocument();
 });

@@ -3,7 +3,9 @@ const Special = ({ image, name, price, description, link }) => {
     <article>
       <div className="special-card">
         <div className="special-card-image">
-          <img src={image} alt="special" height="100%" width="100%" />
+          <a href={link} aria-label="On Click">
+            <img src={image} alt="special" height="100%" width="100%" />
+          </a>
         </div>
         <div className="special-card-content">
           <div className="special-card-name-price">
