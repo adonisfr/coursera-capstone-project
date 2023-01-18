@@ -1,7 +1,11 @@
-const Testimonial = ({ image, name, riview }) => {
+import Rating from "../common/Rating";
+
+const Testimonial = ({ image, name, riview, rating }) => {
   return (
     <div className="testimonial-card">
-      <div className="testimonial-card-text">Rating</div>
+      <div className="testimonial-card-text">
+        <Rating rating={rating} />
+      </div>
       <div className="testimonial-card-info">
         <div className="testimonial-image">
           <img src={image} alt="person" />

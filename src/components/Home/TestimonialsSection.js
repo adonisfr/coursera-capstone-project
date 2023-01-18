@@ -8,23 +8,27 @@ const TestimonialsSection = () => {
         <div className="testimonials-list">
           <Testimonial
             image="/images/1.jpg"
-            name="Name here"
-            riview="Riview here"
+            name="Rufino O."
+            riview="The service we received was amazing and we will definitely be back again."
+            rating={5}
           />
           <Testimonial
             image="/images/2.jpg"
-            name="Name here"
-            riview="Riview here"
+            name="Anna Maria"
+            riview="Amazing wines, food and service"
+            rating={4}
           />
           <Testimonial
             image="/images/3.jpg"
-            name="Name here"
-            riview="Riview here"
+            name="Noemi Silva"
+            riview="This is my absolute favorite restaurant. The food is always fantastic"
+            rating={5}
           />
           <Testimonial
             image="/images/4.jpg"
-            name="Name here"
-            riview="Riview here"
+            name="Jose Luis"
+            riview="This place is great! The atmosphere is calm and cool, but the staff should also be more friendly."
+            rating={3}
           />
         </div>
       </div>

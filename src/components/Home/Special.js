@@ -15,8 +15,10 @@ const Special = ({ image, name, price, description, link }) => {
           <div className="special-card-description">
             <p>{description}</p>
           </div>
-          <div className="special-card-link">
-            <a href={link}>Order a delivery</a>
+          <div className="special-card-link" aria-label="On Click">
+            <a href={link}>
+              Order a delivery <img src="/delivery.png" alt="link" />
+            </a>
           </div>
         </div>
       </div>

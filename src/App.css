@@ -11,7 +11,26 @@ ul.menu {
   flex-direction: column;
   justify-content: space-between;
   gap: 25px;
+}
+
+ul.menu li {
   list-style: none;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+ul.menu li a {
+  text-decoration: none;
+  color: #1e1e1e;
+}
+
+ul.menu li a:hover {
+  color: rgb(16, 55, 2);
 }
 
 .container-menu div.btnMenu {
@@ -27,7 +46,7 @@ ul.menu {
   display: flex;
   justify-content: center;
   left: 0px;
-  background-color: #495e57;
+  background-color: #ffffff;
   top: 0px;
   width: 100%;
   z-index: 1;
@@ -36,8 +55,12 @@ ul.menu {
 
 .panel-nav-menu .close-menu {
   position: absolute;
-  right: 5px;
-  padding-top: 5px;
+  right: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  color: rgb(12, 13, 12);
+  border: 1px solid rgb(6, 5, 5);
+  border-radius: 50px;
 }
 
 header {
@@ -50,7 +73,33 @@ header {
   padding-bottom: 25px;
 }
 
+.header-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 66px;
+  color: #b2b528;
+  margin-bottom: 0px;
+}
+
+.header-sub-title {
+  font-family: "Markazi Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: #ffffff;
+  margin-top: 0px;
+}
+
 header p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #ffffff;
   max-width: 320px;
 }
 
@@ -59,24 +108,81 @@ header p {
   width: 90%;
 }
 
+.header-image img {
+  border-radius: 25px;
+}
+
 .custom-button {
   height: 35px;
-  width: 200px;
+  min-width: 200px;
   border: 0px;
   border-radius: 5px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  align-items: center;
+  text-align: center;
+  color: #000000;
 }
 
 .custom-button:hover {
   cursor: pointer;
+  background: #939507 !important;
+  color: #ccd7d3 !important;
 }
 
 /* Specials Sections */
 .specials-section {
+  display: grid;
+  height: auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1000px, 100px, 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 25px;
+  padding: 20px;
+  max-width: 858px;
+  grid-template-areas:
+    "specials-title"
+    "specials-cards"
+    "specials-button";
+}
+
+.specials-section-title {
+  grid-area: specials-title;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  color: #000000;
+}
+
+.specials-section-button {
+  grid-area: specials-button;
+}
+
+.specials-section-button-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  background: #000000;
+}
+
+.specials-section-cards {
+  grid-area: specials-cards;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 35px;
   padding: 20px;
 }
 
@@ -84,7 +190,7 @@ div .special-card {
   display: flex;
   flex-direction: column;
   height: 439px;
-  max-width: 265px;
+  max-width: 305px;
   background-color: #edefee;
   border-radius: 16px 16px 0px 0px;
   padding-bottom: 20px;
@@ -116,12 +222,17 @@ div .special-card-content .special-card-name-price {
 }
 
 div .special-card-name-price .special-card-name {
+  font-family: "Markazi Text";
+  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 90%;
+  color: #000000;
 }
 
 div .special-card-name-price .special-card-price {
+  font-family: "Karla";
+  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
@@ -129,13 +240,23 @@ div .special-card-name-price .special-card-price {
 }
 
 div .special-card-content .special-card-description p {
+  font-family: "Karla";
+  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #495e57;
 }
 
+div .special-card-content .special-card-link img {
+  height: 12px;
+}
+
 div .special-card-content .special-card-link a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
@@ -149,9 +270,10 @@ div .testimonial-section {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  min-height: 590px;
+  align-items: center;
+  min-height: 400px;
   background-color: #d9d9d9;
-  padding: 122px 0px;
+  padding: 42px 0px 100px 0px;
 }
 
 div .testimonial-section .testimonials-list {
@@ -166,6 +288,15 @@ div .testimonial-section .testimonial-content {
   justify-content: center;
   align-items: center;
   gap: 66px;
+}
+
+div .testimonial-section .testimonial-content h1 {
+  font-family: "Markazi Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43px;
+  color: #333333;
 }
 
 div .testimonial-card {
@@ -213,14 +344,17 @@ div .testimonial-card-info .testimonial-image img {
 }
 
 div .little-lemon-content-title h1 {
+  font-family: "Markazi Text";
   font-style: normal;
   font-weight: 500;
   font-size: 64px;
   line-height: 77px;
+  color: #000000;
   margin-bottom: 0px;
 }
 
 div .little-lemon-content-title h2 {
+  font-family: "Markazi Text";
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -234,6 +368,7 @@ div .little-lemon-content {
 }
 
 div .little-lemon-content p {
+  font-family: "Karla";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -246,7 +381,7 @@ div .little-lemon-content p {
 div .little-lemon-content-images {
   position: relative;
   height: 450px;
-  width: 450px;
+  width: 355px;
 }
 
 div .little-lemon-content-images img {
@@ -257,13 +392,13 @@ div .little-lemon-content-images img {
 div .little-lemon-content-images .little-lemon-content-image1 {
   position: absolute;
   bottom: 30px;
-  left: 10%;
+  left: 1%;
 }
 
 div .little-lemon-content-images .little-lemon-content-image2 {
   position: absolute;
   top: 50px;
-  right: 8%;
+  right: 1%;
 }
 
 /*Footer*/
@@ -276,16 +411,24 @@ footer {
   align-items: center;
   width: 100%;
   background: #ccd7d3;
-  height: 417px;
+  min-height: 250px;
+  padding: 50px 0px;
+}
+
+footer img {
+  height: 190px;
 }
 
 footer .footer-menu {
   display: flex;
   flex-direction: column;
+  justify-content: left;
+  width: 200px;
 }
 
 footer .footer-menu h5 {
   margin-bottom: 0px;
+  font-family: "Karla";
   font-style: normal;
   font-weight: 800;
   font-size: 20px;
@@ -302,6 +445,7 @@ footer .footer-menu ul {
 }
 
 footer .footer-menu ul li .custom-ul-li-link {
+  font-family: "Karla";
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -354,12 +498,14 @@ footer .footer-menu ul li .custom-ul-li-link {
   height: 20px;
   border: 1px solid rgb(101, 100, 100);
   border-radius: 5px;
+  background: white;
 }
 
 .booking-form select {
   height: 25px;
   border: 1px solid rgb(101, 100, 100);
   border-radius: 5px;
+  background: white;
 }
 
 /* booking comfirmation */
@@ -407,33 +553,68 @@ footer .footer-menu ul li .custom-ul-li-link {
     height: 406px;
   }
 
+  header p {
+    max-width: 350px;
+  }
+
   .header-image {
-    height: 300px;
-    width: 250px;
+    height: 325px;
+    width: 350px;
+  }
+
+  .header-image img {
+    border-radius: 25px;
   }
 
   /* Specials Sections */
   .specials-section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto, 1fr;
+    margin: 0px auto;
+    grid-template-areas:
+      "specials-title specials-button"
+      "specials-cards specials-cards";
+  }
+
+  .specials-section-title {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    padding-left: 50px;
+  }
+
+  .specials-section-button {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    padding-right: 50px;
+  }
+
+  .specials-section-cards {
     flex-direction: row;
   }
 
   /* Testimonials Sections */
   div .testimonial-section .testimonials-list {
     flex-direction: row;
+    max-width: 750px;
   }
 
   /* Little Lemon Section */
   .little-lemon-section {
     flex-direction: row;
+    gap: 30px;
   }
 
   /* Footer */
   footer {
     flex-direction: row;
+    gap: 25px;
   }
 
   footer .footer-menu {
     height: 210px;
+    width: auto;
   }
 }
 
@@ -454,6 +635,5 @@ footer .footer-menu ul li .custom-ul-li-link {
     flex-direction: row;
     justify-content: center;
     gap: 25px;
-    list-style: none;
   }
 }

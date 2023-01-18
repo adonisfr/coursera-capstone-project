@@ -45,7 +45,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
           type="date"
           id="date"
           {...formik.getFieldProps("date")}
-          style={{ borderColor: formik.errors.date ? "red" : "" }}
+          style={{ borderColor: formik.errors.date ? "red" : "", width: 200 }}
           data-testid="date-input"
           onChange={handleChange}
         />

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer>
+      <img src="/logo1.png" alt="logo" />
       <div className="footer-menu">
         <h5>Doormat Navigation</h5>
         <ul>

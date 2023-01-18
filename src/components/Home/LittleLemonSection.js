@@ -1,6 +1,6 @@
 const LittleLemonSection = () => {
   return (
-    <section className="little-lemon-section">
+    <section id="about" className="little-lemon-section">
       <div className="little-lemon-content">
         <div className="little-lemon-content-title">
           <h1>Little Lemon</h1>
